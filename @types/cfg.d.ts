@@ -1,0 +1,3 @@
+interface Cfg {
+  PORT: string;
+}

@@ -7,9 +7,10 @@ import { JsendInterceptor } from '@/common/interceptors/jsend.interceptor';
 import { JwtStrategy } from '@/common/strategies/jwt.strategy';
 import { AuthModule } from './auth/auth.module';
 import { SessionsModule } from './sessions/sessions.module';
+import { TasksModule } from './tasks/tasks.module';
 
 @Module({
-  imports: [MainModule, AuthModule, SessionsModule],
+  imports: [MainModule, AuthModule, SessionsModule, TasksModule],
   providers: [
     {
       provide: APP_GUARD,

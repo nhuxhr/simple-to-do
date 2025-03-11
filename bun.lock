@@ -12,6 +12,7 @@
         "@nestjs/throttler": "^6.4.0",
         "@prisma/client": "^6.5.0",
         "consola": "^3.4.0",
+        "jsend": "^1.1.0",
         "reflect-metadata": "^0.2.2",
         "rxjs": "^7.8.1",
       },
@@ -25,6 +26,7 @@
         "@swc/core": "^1.10.7",
         "@types/express": "^5.0.0",
         "@types/jest": "^29.5.14",
+        "@types/jsend": "^1.0.32",
         "@types/node": "^22.10.7",
         "@types/supertest": "^6.0.2",
         "eslint": "^9.18.0",
@@ -441,6 +443,8 @@
     "@types/istanbul-reports": ["@types/istanbul-reports@3.0.4", "", { "dependencies": { "@types/istanbul-lib-report": "*" } }, "sha512-pk2B1NWalF9toCRu6gjBzR69syFjP4Od8WRAX+0mmf9lAjCRicLOWc+ZrxZHx/0XRjotgkF9t6iaMJ+aXcOdZQ=="],
 
     "@types/jest": ["@types/jest@29.5.14", "", { "dependencies": { "expect": "^29.0.0", "pretty-format": "^29.0.0" } }, "sha512-ZN+4sdnLUbo8EVvVc2ao0GFW6oVrQRPn4K2lglySj7APvSrgzxHiNNK99us4WDMi57xxA2yggblIAMNhXOotLQ=="],
+
+    "@types/jsend": ["@types/jsend@1.0.32", "", {}, "sha512-eJTZqYTH5FBgOfZbPdn34QI/E0vMkQVy348pF6W1hCpbQZ58LCxZkYK8OZ9/0gOHYHVwfd3WKMwQWSydFlXq2w=="],
 
     "@types/json-schema": ["@types/json-schema@7.0.15", "", {}, "sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA=="],
 
@@ -1063,6 +1067,8 @@
     "js-tokens": ["js-tokens@4.0.0", "", {}, "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="],
 
     "js-yaml": ["js-yaml@4.1.0", "", { "dependencies": { "argparse": "^2.0.1" }, "bin": { "js-yaml": "bin/js-yaml.js" } }, "sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA=="],
+
+    "jsend": ["jsend@1.1.0", "", {}, "sha512-PrlHjO07zBe03p5i93fyiy2w4cTMVhN5oKyRn5vbDz+ImndSQJZiB4MeGOBoZ2zc9s1BsO7knw3N6jCVkM+VCw=="],
 
     "jsesc": ["jsesc@3.1.0", "", { "bin": { "jsesc": "bin/jsesc" } }, "sha512-/sM3dO2FOzXjKQhJuo0Q173wf2KOo8t4I8vHy6lF9poUp7bKT0/NHE8fPX23PwfhnykfqnC2xRxOnVw5XuGIaA=="],
 

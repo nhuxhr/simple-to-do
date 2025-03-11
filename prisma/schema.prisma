@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum SessionStatusEnum {
+  ACTIVE
+  EXPIRED
+  REVOKED
+}
+
+model User {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String
+  email     String   @unique
+  password  String
+
+  sessions Session[]
+  tasks    Task[]
+
+  @@map("users")
+}
+
+model Session {
+  id         String            @id @default(uuid())
+  createdAt  DateTime          @default(now())
+  updatedAt  DateTime          @updatedAt
+  expiresAt  DateTime
+  lastSeenAt DateTime?
+  userId     String
+  token      String            @unique
+  status     SessionStatusEnum @default(ACTIVE)
+  attributes Json?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model Task {
+  id          String    @id @default(uuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  userId      String
+  title       String
+  completed   Boolean   @default(false)
+  completedAt DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, title])
+  @@map("tasks")
+}

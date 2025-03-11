@@ -10,6 +10,9 @@ async function bootstrap() {
   // Create a new NestJS application instance
   const app = await NestFactory.create(AppModule);
 
+  // Enable versioning
+  app.enableVersioning();
+
   // Get the cfg service
   const cfg = app.get(ConfigService<Cfg>);
 

@@ -11,7 +11,7 @@ import { MainService } from './main.service';
 import { CreateMainDto } from './dto/create-main.dto';
 import { UpdateMainDto } from './dto/update-main.dto';
 
-@Controller()
+@Controller({ version: '1' })
 export class MainController {
   constructor(private readonly mainService: MainService) {}
 

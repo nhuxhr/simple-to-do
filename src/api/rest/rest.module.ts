@@ -6,9 +6,10 @@ import { HttpExceptionFilter } from '@/common/filters/http-exception.filter';
 import { JsendInterceptor } from '@/common/interceptors/jsend.interceptor';
 import { JwtStrategy } from '@/common/strategies/jwt.strategy';
 import { AuthModule } from './auth/auth.module';
+import { SessionsModule } from './sessions/sessions.module';
 
 @Module({
-  imports: [MainModule, AuthModule],
+  imports: [MainModule, AuthModule, SessionsModule],
   providers: [
     {
       provide: APP_GUARD,

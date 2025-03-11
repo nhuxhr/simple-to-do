@@ -4,6 +4,7 @@ import { ThrottlerGuard } from '@nestjs/throttler';
 import { MainModule } from './main/main.module';
 import { HttpExceptionFilter } from '@/common/filters/http-exception.filter';
 import { JsendInterceptor } from '@/common/interceptors/jsend.interceptor';
+import { JwtStrategy } from '@/common/strategies/jwt.strategy';
 
 @Module({
   imports: [MainModule],
@@ -20,6 +21,7 @@ import { JsendInterceptor } from '@/common/interceptors/jsend.interceptor';
       provide: APP_INTERCEPTOR,
       useClass: JsendInterceptor,
     },
+    JwtStrategy,
   ],
 })
 export class RestModule {}

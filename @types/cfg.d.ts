@@ -4,4 +4,5 @@ interface Cfg {
   REST_PATH: string;
   SWAGGER_ENABLED: string;
   SWAGGER_PATH: string;
+  JWT_SECRET: string;
 }

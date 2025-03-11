@@ -5,9 +5,10 @@ import { MainModule } from './main/main.module';
 import { HttpExceptionFilter } from '@/common/filters/http-exception.filter';
 import { JsendInterceptor } from '@/common/interceptors/jsend.interceptor';
 import { JwtStrategy } from '@/common/strategies/jwt.strategy';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [MainModule],
+  imports: [MainModule, AuthModule],
   providers: [
     {
       provide: APP_GUARD,

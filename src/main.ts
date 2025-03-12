@@ -1,6 +1,6 @@
 import consola from 'consola';
 import { NestFactory } from '@nestjs/core';
-import { INestApplication } from '@nestjs/common';
+import { INestApplication, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { AppModule } from './app.module';
 
@@ -41,6 +41,9 @@ async function bootstrap() {
 
   // Enable versioning
   app.enableVersioning();
+
+  // Use validation pipe
+  app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
 
   // Get the cfg service
   const cfg = app.get(ConfigService<Cfg>);

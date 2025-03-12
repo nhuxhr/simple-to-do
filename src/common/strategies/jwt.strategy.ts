@@ -18,7 +18,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(
     private readonly cfg: ConfigService<Cfg>,
     private readonly prisma: PrismaService,
-    // private readonly crypto: CryptoService,
   ) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
